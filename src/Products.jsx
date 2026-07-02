@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Card from "./Card";
 function Products() {
    const [products, setproducts] = useState([])
     //apicall
-    fetch('https://fakestoreapi.com/products')
-  .then(response => response.json())
-  .then(data => setproducts(data));
+
+     useEffect(() => {
+     
+         fetch('https://fakestoreapi.com/products')
+       .then(response => response.json())
+       .then(data => setproducts(data));
+     
+      
+     }, [])
+     
+
   return (
     <>
      {
