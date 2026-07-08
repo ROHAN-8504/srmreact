@@ -8,7 +8,7 @@ function Productform() {
   //function whhere its send the product data to backend
   let sendproducts=async (event)=>{
     event.preventDefault()
-  let result=  await  fetch('http://localhost:3000/products',{
+  let result=  await  fetch('https://srm-ecombackend.onrender.com/products',{
         method:'POST',
         headers:{
                 'Content-Type': 'application/json'
